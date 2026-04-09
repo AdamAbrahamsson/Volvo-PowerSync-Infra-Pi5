@@ -11,3 +11,4 @@ resources:
   - booking-service.yaml
   - simulator-service.yaml
   - notification-service.yaml
+  - frontend.yaml
