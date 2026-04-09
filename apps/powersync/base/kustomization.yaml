@@ -10,3 +10,4 @@ resources:
   - kafka-statefulset.yaml
   - booking-service.yaml
   - simulator-service.yaml
+  - notification-service.yaml
