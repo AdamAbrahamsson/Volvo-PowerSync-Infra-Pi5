@@ -1,0 +1,15 @@
+# Replace CHANGEME_TUNNEL_UUID with your tunnel ID from the Cloudflare dashboard (Tunnel details).
+# Tunnel must match the JSON in Secret tunnel-credentials (credentials.json).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloudflared-config
+  namespace: volvo-powersync
+data:
+  config.yaml: |
+    tunnel: 9f76b5ec-8755-4af8-b27a-69b63cacabf2
+    credentials-file: /etc/cloudflared/credentials.json
+    ingress:
+      - hostname: powersync.adamcloud.dev
+        service: http://traefik.kube-system.svc.cluster.local:80
+      - service: http_status:404

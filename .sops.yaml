@@ -1,0 +1,13 @@
+creation_rules:
+  # Replace this recipient with your real age public key from:
+  # age-keygen -y ~/.config/sops/age/keys.txt
+  - path_regex: ".*secret.*\\.ya?ml$"
+    encrypted_regex: "^(data|stringData)$"
+    age:
+      - "age1knvscpcgrfenesnpp3uf9wlvpcn0q4nd77fdssnwae20f4qt64fs8q4q68"
+
+  # Cloudflare tunnel / auth secrets (cloudflared-*, cloudflare-auth*, etc.)
+  - path_regex: ".*cloudflare.*\\.ya?ml$"
+    encrypted_regex: "^(data|stringData)$"
+    age:
+      - "age1knvscpcgrfenesnpp3uf9wlvpcn0q4nd77fdssnwae20f4qt64fs8q4q68"

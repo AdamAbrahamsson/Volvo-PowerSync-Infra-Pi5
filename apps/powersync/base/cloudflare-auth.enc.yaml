@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: tunnel-credentials
+    namespace: volvo-powersync
+stringData:
+    credentials.json: ENC[AES256_GCM,data:jgKF34r8X9HFG50u/+OENnZgy9Y22nnjVoRorsWg96Q+jADTrm/QIj8kc9p0vgeqIqip8a5J3y+hkRtKWNl7Y7wNb/7i4mqV36Poe7ZPEQRzAffaBNWscDJ+w2LvzVWM5ApyYIvWvGrYb0NetjGNCbQ9kuOP+KsAyWohxGmazirf4FXM5zVmRusX2S1PB1ciGiYZ6Ef2v/7vytxzXc6owDBI//dHArgqWXkD15eI,iv:v3KUApoxf9910A1uBYJhs+XnwoGY2j2vE+6WCxKEWdA=,tag:n4hr+CHv/XWR0CtrrYQphA==,type:str]
+sops:
+    age:
+        - recipient: age1knvscpcgrfenesnpp3uf9wlvpcn0q4nd77fdssnwae20f4qt64fs8q4q68
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBnNUpJMXpzOHVPSDlhNFZI
+            NE9XK3RyMm80TzQrYUJRN0R4cENRbW5CZGl3CkxpVWRBVmJDa1JQMlcvVmRoK3FP
+            a012NzNKVUZiNzBZOS9lcTNKUHJ4YTgKLS0tIFNKdTJWYm45L1BWMFcyTW1SZngw
+            UE9XbkE1UW9oUHZKaEZ4OUcrT0FHTUUKcH0VbRLY5+7jVHlCe5wJnRYtvdGsEuij
+            4OE155tgHk+4L+77dpz4xUzojuAu8z6zKMb8+WOD0WLom6bGwIBs7w==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2026-04-09T19:34:58Z"
+    mac: ENC[AES256_GCM,data:jZE+R1qjudZgqDo+vWDtNdT0pByNCddWokOMXqOvJ9B32p7vfwcZk2GaAXY2a0l+jvnr0htwUREF+m6ADc5+fkfPJ6GUDTWMp6wMw2fjBOzHhkhmcJnVdZwrQVWLlwl1ac6V57qOM4ysGPgPsiI7L8irnBENiFwuTZ1ktqEbMmQ=,iv:y57zv5VmznyRBeJzeOqiWX8cOUGlm4oHozqGxVYSeA0=,tag:pN7igXwP+Px181pYghuVIQ==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.11.0

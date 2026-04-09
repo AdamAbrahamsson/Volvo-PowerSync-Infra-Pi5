@@ -1,0 +1,48 @@
+# Single host: path routing for frontend + APIs (works with Cloudflare Tunnel -> Traefik).
+# k3s default ingress controller is Traefik (kube-system).
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: powersync
+  namespace: volvo-powersync
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: powersync.adamcloud.dev
+      http:
+        paths:
+          - path: /api/stations-status
+            pathType: Prefix
+            backend:
+              service:
+                name: notification-service
+                port:
+                  number: 8082
+          - path: /api/cars-status
+            pathType: Prefix
+            backend:
+              service:
+                name: notification-service
+                port:
+                  number: 8082
+          - path: /api/vip-stations
+            pathType: Prefix
+            backend:
+              service:
+                name: booking-service
+                port:
+                  number: 8081
+          - path: /api/cars
+            pathType: Prefix
+            backend:
+              service:
+                name: simulator-service
+                port:
+                  number: 8080
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
