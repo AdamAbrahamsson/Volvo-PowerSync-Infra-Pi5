@@ -5,3 +5,6 @@ resources:
   - postgres-secret.yaml
   - postgres-service.yaml
   - postgres-statefulset.yaml
+  - kafka-headless-service.yaml
+  - kafka-service.yaml
+  - kafka-statefulset.yaml
