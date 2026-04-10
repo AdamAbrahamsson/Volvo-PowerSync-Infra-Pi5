@@ -51,6 +51,8 @@ spec:
               value: "0"
             - name: KAFKA_AUTO_CREATE_TOPICS_ENABLE
               value: "true"
+            - name: KAFKA_LOG_RETENTION_HOURS
+              value: "24"
             - name: CLUSTER_ID
               value: "MkU3OEVBNTcwNTJENDM2Qk"
           volumeMounts:
