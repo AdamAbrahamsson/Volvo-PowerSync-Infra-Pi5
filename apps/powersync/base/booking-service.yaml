@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: booking-service
   namespace: volvo-powersync
+  labels:
+    app: booking-service
 spec:
   selector:
     app: booking-service

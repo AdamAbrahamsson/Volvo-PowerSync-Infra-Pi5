@@ -13,6 +13,7 @@ resources:
   - kafka-service.yaml
   - kafka-statefulset.yaml
   - booking-service.yaml
+  - booking-service-servicemonitor.yaml
   - simulator-service.yaml
   - notification-service.yaml
   - frontend.yaml
