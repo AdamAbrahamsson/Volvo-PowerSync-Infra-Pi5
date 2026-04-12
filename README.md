@@ -27,8 +27,6 @@ The cluster is expected to run **kube-prometheus-stack** (or equivalent): **Prom
 - A **`ServiceMonitor`** (`apps/powersync/base/booking-service-servicemonitor.yaml`) selects the booking Service and sets `release: kube-prometheus-stack` so Prometheus scrapes every **15s**.
 - Use **Grafana** in that stack to graph booking metric (`powersync_station_bookings_total`).
 
-If you scale booking to multiple replicas, aggregate with `sum by (...) (...)` so panels stay correct.
-
 ---
 
 More deployment detail (namespaces, image tags, rollout steps) can be added here as this repo grows.
