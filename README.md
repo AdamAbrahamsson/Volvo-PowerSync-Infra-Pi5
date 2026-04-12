@@ -25,7 +25,7 @@ The cluster is expected to run **kube-prometheus-stack** (or equivalent): **Prom
 
 - **`booking-service`** exposes Spring Boot Actuator metrics at **`/actuator/prometheus`** on its HTTP port.
 - A **`ServiceMonitor`** (`apps/powersync/base/booking-service-servicemonitor.yaml`) selects the booking Service and sets `release: kube-prometheus-stack` so Prometheus scrapes every **15s**.
-- Use **Grafana** in that stack to graph booking metrics (names like `powersync_station_bookings_total`, `powersync_station_releases_total`, `powersync_station_release_failures_total`, etc.—see `BookingMetrics` in the core repo).
+- Use **Grafana** in that stack to graph booking metric (`powersync_station_bookings_total`).
 
 If you scale booking to multiple replicas, aggregate with `sum by (...) (...)` so panels stay correct.
 
